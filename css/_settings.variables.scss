@@ -1,0 +1,61 @@
+//Fonts
+$font-family-sans-serif:    "adelle-sans", Helvetica, Arial, sans-serif;
+$font-family-serif:    		"PT Serif", "Times New Roman", Times, serif;
+$base-font-family: 			"adelle-sans", Helvetica, Arial, sans-serif !default;
+
+
+$font-size-base:            16px;
+$font-unit:                 0em; 
+$browser-context:           $font-size-base;
+$baseFontSize:				16px; /* ($baseFontSize * 1) + 0px; */
+
+
+// //colors
+$brand-primary:             #2D9DE2; 
+$brand-secondary:           #e22f22;
+
+$colors: (
+						
+    lightgrey:		rgba(74,74,74,.3),
+    mediumgrey:			rgba(74,74,74,.7),
+	darkgrey: 			#4A4A4A,
+	darkgrey60pc:    	rgba(74,74,74,.6),
+	red:				#F03746,
+);
+
+
+$header-break:              992px;
+$large-break:				1450px;
+$md-break:                  1200px; /* col-lg  */
+$mmd-break:                 992px;  /* col-md ipad landscape */
+$mmd-break-down:            991px;  /* col-md ipad landscape */
+$sm-break:                  768px;  /* col-sm ipad */
+$sm-break-down:             767px;  /* col-sm ipad */
+$mobile-break:              620px;	/* col-xs */
+$sm-mobile-break:           490px;	/* col-xs */
+
+//Navbar
+$logo-width:                52px;
+$logo-height:               52px;
+$sticked-logo-height:       34px;
+$sticked-logo-width:        34px;
+$navbar-height:             70px;
+
+$center:					center;
+
+
+$desktop: 				"screen and (max-width : 1194px)";
+$desktop-up: 			"screen and (min-width : 992px)";
+$smallDevices: 			"screen and (min-width : 1025px) and (max-width : 1150px)";
+$ipadPortrait: 			"screen and (max-width : 992px)";
+$phone: 				"screen and (min-width : 200px)  and (max-width : 480px)";
+$iPhoneMedium:	   		"screen and (min-width : 481px)  and (max-width : 667px)";
+$iPhoneLarge: 			"screen and (min-width : 668px)  and (max-width : 767px)";
+$tabletLandscape: 		"screen and (min-width : 992px)  and (max-width : 1024px)";
+$tablet-up: 			"screen and (min-width : 768px)";
+$tablet: 				"screen and (min-width : 768px)  and (max-width : 991px)";
+$up-to-desktop: 		"screen and (max-width : 991px)";
+$mobile: 				"screen and (max-width : 767px)";
+
+// Standard transition speed
+$transition: 0.4s;

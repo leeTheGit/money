@@ -1,28 +1,49 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { connect } from 'react-redux';
+import './assets/styles/concat.min.css';
+import Transactions from './components/transactions';
+import DatabaseLoad from './components/database';
+import { CoolSlider }   from './components/slider/slider.js';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    
+    state = {
+        db : null,
+        dateEnd : null,
+        dbloaded : false,
+        dateStart : null,
+    }
+
+
+    render() {
+        console.log('rendering app');
+        console.log(this.props.db, this.props.dbloaded);
+        return (
+
+            <div id="container" className="container u-flex_col u-flex1">
+                <CoolSlider />
+                { 
+                    (this.props.db !== null)
+                        ? <Transactions database={this.props.db} />
+                        : null
+                }
+                
+
+                <DatabaseLoad />
+            </div>
+        );
+    }
 }
 
-export default App;
+
+const mapStateToProps = (state) => {
+    return {
+        dbloaded : state.dbloaded,
+        db: state.db,
+        dateStart : state.dateStart,
+        dateEnd : state.dateEnd,
+    };
+};
+
+
+export default connect(mapStateToProps)(App);
